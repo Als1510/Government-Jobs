@@ -11,7 +11,7 @@ import { AuthService } from '../../../services/auth.service'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  login = new Login('anshul@gmail.com', 'anshul123');
+  login = new Login('', '');
   isLoggedIn = false;
   isLoginFailed = false;
   msgClass = 'danger';
