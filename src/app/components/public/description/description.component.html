@@ -1,0 +1,33 @@
+<div class="container" *ngIf="description; else elseblock">
+  <h1>Description</h1>
+  <p>{{description?.title}}</p>
+  <h4>{{description?.name}}</h4>
+  <div class="inner">
+    <table>
+      <tr>
+        <th>Name of the Post</th>
+        <th>Total Vacancies</th>
+      </tr>
+      <tr>
+        <td>{{description?.name}}</td>
+        <td>{{description?.vacancies}}</td>
+      </tr>
+    </table>
+    <div class="image">
+      <img [src]="'data:image/png;base64,'+ description.image_name">
+      <button (click)="downloadImage()"><i class="fa fa-download"></i> Download</button>
+    </div>
+  </div>
+  <h4>&#10004; Area wise Vacancies:</h4>
+  <p>{{description?.area_wise}}</p>
+  <h4>&#10004; Ag Limit:</h4>
+  <p>{{description?.age_limit}}</p>
+  <h4>&#10004; Pay Scale:</h4>
+  <p>{{description?.payscale}}</p>
+  <h4>&#10004; Application Fee:</h4>
+  <p>{{description?.fee}}</p>
+  <button class="download" (click)="downloadPdf()"><i class="fa fa-download"></i>Download as PDF</button>
+</div>
+<ng-template #elseblock>
+  <h1>No Data To Display</h1>
+</ng-template>

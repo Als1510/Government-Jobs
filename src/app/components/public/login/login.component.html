@@ -1,0 +1,15 @@
+<div class="container">
+  <div *ngIf="msg" class="msg {{msgClass}}">{{msg}}</div>
+  <div class="wrapper">
+    <h1>Login</h1>
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+      <label>Email</label>
+      <input type="email" name="email" [(ngModel)]="login.email">
+      <br>
+      <label>Password</label>
+      <input type="password" name="password" [(ngModel)]="login.password">
+      <br>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>

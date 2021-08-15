@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Add Education Wise Posts</h1>
+  <form #educationForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="input">
+      <label>Select Education</label>
+      <select name="job_id" [(ngModel)]="educationModel.job_id">
+        <option *ngFor="let job of jobs" [value]="job.job_id">{{job.title}}</option>
+      </select>
+    </div>
+    <div class="input">
+      <label>Title</label>
+      <input type="text" name="title" [(ngModel)]="educationModel.title">
+    </div>
+    <div class="input">
+      <label>Vacancies</label>
+      <input type="number" name="vacancies" [(ngModel)]="educationModel.vacancies">
+    </div>
+    <button type="submit">Add</button>
+  </form>
+</div>

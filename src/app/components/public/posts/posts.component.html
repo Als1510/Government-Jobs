@@ -1,0 +1,13 @@
+<div class="container" *ngIf="posts.length>0; else elseblock">
+  <h1>Posts</h1>
+  <ul>
+    <li *ngFor="let post of posts" (click)="onSelect(post)">
+      <span>{{post.title}}</span>
+      <span>{{post.organisation}}</span>
+      <span>{{post.date}}</span>
+    </li>
+  </ul>
+</div>
+<ng-template #elseblock>
+  <h1>No Data To Display</h1>
+</ng-template>

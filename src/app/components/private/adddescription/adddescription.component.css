@@ -1,0 +1,55 @@
+.container{
+  display:flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.container h1{
+  text-align: center;
+  font-size:2.5rem;
+  margin-bottom: 2rem;
+}
+
+.input{
+  display: grid;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  grid-template-columns: 1.5fr 3fr;
+}
+
+textarea{
+  height:2rem;
+}
+
+label{
+  font-size: 1.3rem;
+  margin-right: 2rem;
+}
+
+select{
+  outline: none;
+  border:none;
+  border-bottom: rgb(230, 84, 108) 1px solid;
+}
+
+button{
+  margin: 2rem 3rem;
+  padding: 0.5rem 3rem;
+  float:right;
+  font-size: 1.2rem;
+  border:none;
+  border-radius: 10px;
+  color:#fff;
+  background: rgb(214, 46, 74);
+  box-shadow: 7px 6px 28px 1px rgba(0,0,0,0.24);
+  transition: background 1s ease-in;
+}
+
+button:hover{
+  background: rgb(223, 22, 56);
+}
+
+button:active{
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0,0,0,0.24);
+}

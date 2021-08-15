@@ -1,0 +1,65 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem;
+}
+
+.msg{
+  margin: 2rem 0;
+  padding: 0.2rem 5rem;
+  border-radius: 10px;
+}
+
+.wrapper{
+  border-radius: 15px;
+  box-shadow: 0 0 35px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.wrapper h1{
+  text-align: center;
+  background: rgb(54, 54, 221);
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem 0;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+}
+
+label{
+  font-size:1.4rem;
+  margin: 0.8rem 0;
+}
+
+input{
+  font-size: 1rem;
+  padding-left: 0.2rem;
+  border:none;
+  border-bottom: pink 1px solid;
+  outline: none;
+}
+
+button{
+  padding: 0.4rem 1rem;
+  background: rgb(233, 58, 87);
+  color:#fff;
+  border:none;
+  font-size: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.danger{
+  color: red;
+  box-shadow: 0 0 15px rgba(255,0,0,0.5);
+}
+
+.success{
+  color: green;
+  box-shadow: 0 0 15px rgba(0,255,0,0.5);
+}

@@ -1,0 +1,19 @@
+<div class="container">
+  <ul>
+    <h1>Existed jobs are :</h1>
+    <li *ngFor="let job of jobs">
+      {{job.title}}
+    </li>
+  </ul>
+  <form #jobForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="input">
+      <label>Job Title</label>
+      <input type="text" name="title" [(ngModel)]="jobModel.title">
+    </div>
+    <div class="input">
+      <label>Vacancies</label>
+      <input type="number" name="vacancies" [(ngModel)]="jobModel.vacancies">
+    </div>
+    <button type="submit">Add</button>
+  </form>
+</div>

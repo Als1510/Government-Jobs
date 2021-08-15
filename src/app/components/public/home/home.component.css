@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+}
+
+.container h1{
+  margin-bottom: 2.5rem;
+  font-size: 3rem;
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+li{
+  margin: 0.2rem 0;
+  display: flex;
+  padding: 0.3rem 4rem;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  transition: background 1s ease-in;
+}
+
+li:nth-child(even) {
+  background: rgb(80, 78, 78);
+  color:#fff;
+}
+
+li:nth-child(odd) {
+  background: rgb(247, 243, 243);
+  color:#000;
+}
+
+li:nth-child(even):hover{
+  background: rgb(63, 61, 61);
+}
+
+li:nth-child(odd):hover{
+  background: rgb(233, 228, 228);
+}
+
+
+li span:hover{
+  cursor: pointer;
+}

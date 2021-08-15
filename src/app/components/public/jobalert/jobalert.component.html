@@ -1,0 +1,16 @@
+<div class="container">
+  <div *ngIf="msg" class="msg {{msgClass}}">{{msg}}</div>
+  <form #alertForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="input">
+      <label>Select Job</label>
+      <select name="job_id" [(ngModel)]="alert.job_id">
+        <option *ngFor="let job of jobs" [value]="job.job_id">{{job.title}}</option>
+      </select>
+    </div>
+    <div class="input">
+      <label>Whatsapp Number</label>
+      <input type="number" name="phone" requried max="10" min="10" [(ngModel)]="alert.phone">
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>

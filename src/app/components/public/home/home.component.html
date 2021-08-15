@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Government Jobs</h1>
+  <ul>
+  <li *ngFor="let job of jobs" (click)="onSelect(job)">
+    <span>{{job.title}}</span>
+    <span>{{job.vacancies}}+ vacancies</span>
+  </li>
+</ul>
+</div>

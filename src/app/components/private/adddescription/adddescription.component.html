@@ -1,0 +1,54 @@
+<div class="container">
+  <h1>Add Description</h1>
+  <form #description="ngForm" (ngSubmit)="onSubmit()">
+    <div class="input">
+      <label>Select Job</label>
+      <select name="job_id" [(ngModel)]="data.job_id">
+        <option *ngFor="let job of jobs" [value]="job.job_id">{{job.title}}</option>
+      </select>
+    </div>
+    <div class="input">
+      <label>Select Education</label>
+      <select name="edu_id" id="edu_id" [(ngModel)]="data.edu_id">
+        <option *ngFor="let edu of education" [value]="edu.edu_id">{{edu.title}}</option>
+      </select>
+    </div>
+    <div class="input">
+      <label>Select Post</label>
+      <select name="post_id" id="post_id" [(ngModel)]="data.post_id">
+        <option *ngFor="let post of posts" [value]="post.p_id">{{post.title}}</option>
+      </select>
+    </div>
+    <div class="input">
+      <label>Description of Post</label>
+      <textarea name="title" [(ngModel)]="data.title"></textarea>
+    </div>
+    <div class="input">
+      <label>Post Name</label>
+      <input type="text" name="name" [(ngModel)]="data.name">
+    </div>
+    <div class="input">
+      <label>Vacancies</label>
+      <input type="number" name="vacancies" [(ngModel)]="data.vacancies">
+    </div>
+    <div class="input">
+      <label>Pay Scale</label>
+      <textarea name="pay_scale" [(ngModel)]="data.pay_scale"></textarea>
+    </div>
+    <div class="input">
+      <label>Posts area according to gender</label>
+      <textarea name="area_wise" [(ngModel)]="data.area_wise"></textarea>
+    </div>
+    <div class="input">
+      <label>Age Limit</label>
+      <textarea name="age_limit" [(ngModel)]="data.age_limit"></textarea>
+    </div>
+    <div class="input">
+      <label>Application Fee</label>
+      <textarea name="fee"  [(ngModel)]="data.fee"></textarea>
+    </div>
+    <button type="submit">Submit</button>
+    <input type="file" (change)="onSelectFile($event)" accept="image/*">
+    <img [src]="data.url" height="50" width="50">
+  </form>
+</div>

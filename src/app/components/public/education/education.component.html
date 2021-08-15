@@ -1,0 +1,12 @@
+<div class="container" *ngIf="education.length>0; else elseblock">
+  <h1>Education</h1>
+  <ul>
+    <li *ngFor="let edu of education" (click)="onSelect(edu)">
+      <span>{{edu.title}}</span>
+      <span>{{edu.vacancies}}+ vacancies</span>
+    </li>
+    </ul>
+</div>
+<ng-template #elseblock>
+  <h1>No Data To Display</h1>
+</ng-template>

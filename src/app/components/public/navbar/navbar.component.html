@@ -1,0 +1,9 @@
+<nav>
+  <a routerLink="/jobalert"><i class="fab fa-whatsapp"></i> Job Alerts on Whatsapp</a>
+  <ul>
+    <li *ngIf="isLoggedIn" class="text"><p>Welcome Admin</p></li>
+    <li *ngIf="!isLoggedIn"><a routerLink="/login" routerLinkActive="active">Login</a></li>
+    <li *ngIf="isLoggedIn"><a (click)="logout()">Logout <i class="fas fa-sign-out-alt"></i></a></li>
+    <li *ngIf="!isLoggedIn"><a routerLink="/home" routerLinkActive="active" class="icon" [routerLinkActiveOptions]={exact:true}><i class="fa fa-user"></i></a></li>
+  </ul>
+</nav>
